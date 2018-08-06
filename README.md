@@ -6,5 +6,7 @@ While playing around with [mapstruct] in [kotlin] and more concretely the of map
 
 The actual mapper implementation can be found [here](src/main/kotlin/de/jotb/playground/kotlinmapstruct/car/CarConverter.kt)
 
+A failing test case (due to a stackoverflow error) can be found [here](src/test/kotlin/de/jotb/playground/kotlinmapstruct/car/CarConverterTest.kt) 
+
 [mapstruct]: http://mapstruct.org/
 [kotlin]: https://kotlinlang.org/
