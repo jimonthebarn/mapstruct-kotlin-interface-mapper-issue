@@ -49,13 +49,9 @@
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
-                <artifactId>kotlin-maven-plugin</artifactId>
                 <groupId>org.jetbrains.kotlin</groupId>
-                <configuration>
-                    <args>
-                        <arg>-Xjsr305=strict</arg>
-                    </args>
-                </configuration>
+                <artifactId>kotlin-maven-plugin</artifactId>
+                <version>${kotlin.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.jetbrains.kotlin</groupId>
@@ -63,11 +59,12 @@
                         <version>${kotlin.version}</version>
                     </dependency>
                 </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
+                <configuration>
+                    <args>
+                        <arg>-Xjsr305=strict</arg>
+                        <arg>-Xjvm-default=compatibility</arg>
+                    </args>
+                </configuration>
                 <executions>
                     <execution>
                         <id>kapt</id>

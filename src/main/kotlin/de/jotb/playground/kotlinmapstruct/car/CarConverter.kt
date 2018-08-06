@@ -14,6 +14,7 @@ import org.mapstruct.ObjectFactory
 @Mapper
 interface CarConverter {
 
+    @JvmDefault
     @ObjectFactory
     fun convertToDto(car: Car) : CarDto {
 
@@ -27,6 +28,7 @@ interface CarConverter {
     fun convertSportsCarToDto(car : SportsCar) : SportsCarDto
     fun convertSuvCarToDto(car : SuvCar) : SuvCarDto
 
+    @JvmDefault
     @ObjectFactory
     fun convertToModel(carDto: CarDto) : Car {
         return when(carDto) {
